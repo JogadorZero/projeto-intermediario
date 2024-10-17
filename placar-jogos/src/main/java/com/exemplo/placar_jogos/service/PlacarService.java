@@ -1,11 +1,12 @@
 package com.exemplo.placar_jogos.service;
 
 import org.springframework.stereotype.Service;
-import org.springframework.web.client.RestTemplate;
+import com.exemplo.placar_jogos.model.Jogo;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.client.RestTemplate;
 
 @Service
 public class PlacarService {
@@ -21,6 +22,13 @@ public class PlacarService {
     public String getJogosPorCampeonato(String campeonato) {
         String apiUrlComCampeonato = API_SEARCH_URL + campeonato + "&type=all&page=0";
         return makeApiRequest(apiUrlComCampeonato);
+    }
+
+    // Método para adicionar um jogo, que será chamado no controller
+    public String adicionarJogo(Jogo jogo) {
+        // Aqui, você pode adicionar a lógica de como processar o jogo.
+        // Isso pode ser uma lógica de salvar o jogo em um banco de dados ou qualquer outra coisa.
+        return "Jogo adicionado: " + jogo.toString();
     }
 
     private String makeApiRequest(String url) {

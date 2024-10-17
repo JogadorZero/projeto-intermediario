@@ -70,9 +70,9 @@ Utilize ferramentas como Insomnia ou Postman para testar as requisições à API
 ---
 
 ## Endpoints
-
+## GET
 ### 1. `placar/jogos`
-Retorna tofos os jogos sendo transmitidos em tempo real ao redor do mundo.
+Retorna todos os jogos sendo transmitidos em tempo real ao redor do mundo.
 - **Método:** **GET**
 - **URL:** `http://localhost:8080/placar/jogos`
 
@@ -80,6 +80,12 @@ Retorna tofos os jogos sendo transmitidos em tempo real ao redor do mundo.
 Retorna as informações sobre o projeto.
 - **Método:** **GET**
 - **URL:** `http://localhost:8080/placar/sobre`
+
+## POST
+### 1. `placar/adicionar`
+Adiciona valores em formato JSON através de uma requisição POST.
+- **Método:** **POST**
+- **URL:** `http://localhost:8080/placar/adicionar`
 
 ---
 
@@ -90,6 +96,24 @@ Retorna todos os jogos sendo transmitidos em tempo real, de acordo com o campeon
 - **Método:** **GET**
 - **Exemplo**
   - **URL:** `http://localhost:8080/placar/jogos?campeonato=brasileirao`
+
+---
+
+## Adicionando um jogo
+É possível adicionar um jogo com os times de sua preferência.
+### 1. `http://localhost:8080/placar/adicionar`
+Retorna todos os jogos sendo transmitidos em tempo real, de acordo com o campeonato pesquisado.
+- **Método:** **POST**
+- **Corpo (Body):** Você deve enviar um JSON que corresponda à estrutura da classe `Jogo`.
+- **Exemplo:**
+```json
+{
+  "timeCasa": "Flamengo",
+  "timeVisitante": "Vasco",
+  "campeonato": "Campeonato Brasileiro",
+  "data": "2024-10-17T16:00:00"
+}
+```
 
 ---
 

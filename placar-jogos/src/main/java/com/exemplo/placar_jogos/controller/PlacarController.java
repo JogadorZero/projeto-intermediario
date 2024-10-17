@@ -1,10 +1,8 @@
 package com.exemplo.placar_jogos.controller;
 
 import com.exemplo.placar_jogos.service.PlacarService;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+import com.exemplo.placar_jogos.model.Jogo;
 
 @RestController
 @RequestMapping("/placar")
@@ -30,5 +28,11 @@ public class PlacarController {
                 "  \"estudante\": \"Lucas Cardoso Rodrigues\",\n" +
                 "  \"projeto\": \"Placar de Jogos\"\n" +
                 "}";
+    }
+
+    // Adicionando o método POST
+    @PostMapping("/adicionar")
+    public String adicionarJogo(@RequestBody Jogo jogo) {
+        return placarService.adicionarJogo(jogo);
     }
 }
