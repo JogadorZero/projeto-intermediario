@@ -37,8 +37,7 @@ Antes de executar o projeto, certifique-se de que você possui os seguintes soft
 
 ### 1. Clonar o repositório
 ```bash
-git clone https://github.com/JogadorZero/Back_End.git
-cd projeto-intermediario/placar-jogos
+git clone https://github.com/JogadorZero/projeto-intermediario.git
 ````
 
 ### 2. Configurar a chave da API
