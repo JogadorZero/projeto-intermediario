@@ -12,7 +12,7 @@ public class PlacarService {
 
     private static final String API_SEARCH_URL = "https://sofascore.p.rapidapi.com/search?q=";
     private static final String API_HOST = "sofascore.p.rapidapi.com";
-    private static final String API_KEY = "SUACHAVEAQUI";
+    private static final String API_KEY = "660cb15b8emsh2dc778c7a8ebab1p13a0e0jsna2d62aab87c6";
 
     public String getJogosBrasileiros() {
         return makeApiRequest("https://sofascore.p.rapidapi.com/tournaments/get-live-events?sport=football");
