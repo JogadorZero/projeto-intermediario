@@ -41,11 +41,11 @@ git clone https://github.com/JogadorZero/projeto-intermediario.git
 ````
 
 ### 2. Configurar a chave da API
-Substitua sua chave da API no arquivo `PlacarService.java` localizado em `src/main/java/com/exemplo/placar_jogos/service`.
+Verifique a chave da API no arquivo `PlacarService.java` localizado em `src/main/java/com/exemplo/placar_jogos/service`.
 
 #### Localização (linha 15)
 ```java
-private static final String API_KEY = "SUACHAVEAQUI";
+private static final String API_KEY = "660cb15b8emsh2dc778c7a8ebab1p13a0e0jsna2d62aab87c6";
 ```
 
 ### 3. Build e execução do projeto
